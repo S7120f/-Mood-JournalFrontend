@@ -1,0 +1,11 @@
+<div class="journal-card" *ngFor="let entry of entries()">
+  <div class="mood">{{ entry.moodStatus }}</div>
+  <div class="note">{{ entry.note }}</div>
+  <div class="footer">
+    <span>Användare: {{ entry.username }}</span>
+    <span>
+  {{ entry.createdAt | date:'d MMMM y' }} klockan {{ entry.createdAt | date:'HH:mm' }}
+    </span>
+
+  </div>
+</div>

@@ -1,0 +1,39 @@
+.stats-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.stats-card h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.stats-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.stats-card li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.stats-card li:last-child {
+  border-bottom: none;
+}
+
+.stats-card .mood {
+  font-weight: bold;
+  color: #1976d2;
+}
+
+.stats-card .percentage {
+  font-weight: bold;
+  color: #444;
+}

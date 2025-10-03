@@ -1,0 +1,9 @@
+<div class="stats-card">
+  <h2>Statistik</h2>
+  <ul>
+    <li *ngFor="let stat of stats()">
+      <span class="mood">{{ stat.mood }}</span>
+      <span class="percentage">{{ stat.percentage }}%</span>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,20 @@
+<header class="app-header">
+  <h1>JournalApp</h1>
+  <button class="logout-btn" (click)="logout()">Logga ut</button>
+</header>
+
+<div class="app-container">
+  <main class="dashboard">
+    <!-- Vänster kolumn -->
+    <section>
+      <app-create-journal (journalEntryCreated)="onJournalEntryCreated($event)"></app-create-journal>
+      <app-journal-filter (dateFilter)="onDateFilter($event)"></app-journal-filter>
+      <app-journal-list [entries]="entries()"></app-journal-list>
+    </section>
+
+    <!-- Höger kolumn -->
+    <aside>
+      <app-journal-stats [stats]="stats()"></app-journal-stats>
+    </aside>
+  </main>
+</div>

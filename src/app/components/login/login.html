@@ -1,0 +1,20 @@
+<div *ngIf="!currentUser; else loggedIn">
+  <h2>Logga in</h2>
+  <form (ngSubmit)="onLogin()">
+    <input [(ngModel)]="username" name="username" placeholder="Användarnamn" required />
+    <input [(ngModel)]="password" name="password" type="password" placeholder="Lösenord" required />
+    <button type="submit">Logga in</button>
+  </form>
+
+  <h2>Registrera</h2>
+  <form (ngSubmit)="onRegister()">
+    <input [(ngModel)]="regiUsername" name="regUsername" placeholder="Nytt användarnamn" required />
+    <input [(ngModel)]="regiPassword" name="regPassword" type="password" placeholder="Nytt lösenord" required />
+    <button type="submit">Registrera</button>
+  </form>
+</div>
+
+<ng-template #loggedIn>
+  <p>Inloggad som: {{ currentUser?.username }}</p>
+  <button (click)="logout()">Logga ut</button>
+</ng-template>

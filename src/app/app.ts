@@ -1,12 +1,17 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {Component} from '@angular/core';
+import {Header} from './header/header';
+import {Login} from './components/login/login';
+import {NgIf} from '@angular/common';
+import { AuthService} from './services/auth-service';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+  imports: [Header, Login, NgIf],
+  styleUrl: './app.css',
+  templateUrl: 'app.html'
 })
 export class App {
-  protected readonly title = signal('minJounralFrontend');
+
+  constructor(public authService: AuthService) {}
+
 }
